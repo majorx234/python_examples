@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 import dataclasses
 import numpy as np
-import codecs, json
+import json
 
 class NumpyEncoder(json.JSONEncoder):
     def default(self, obj):
@@ -26,7 +26,6 @@ class Position:
 
 
 def main():
-    # json_file_name = sys.argv[1]
     mypos = Position(np.array([1, 2, 3]),np.array([0,0,0,1]))
     json_string = mypos.to_json()
     print(json_string)
