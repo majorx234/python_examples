@@ -14,8 +14,8 @@ class NumpyEncoder(json.JSONEncoder):
 @dataclass
 class Position:
     """Class for keeping pos and heading"""
-    pos: np.array
-    heading: np.array
+    pos: np.ndarray
+    heading: np.ndarray
 
     def from_json(json_string) -> "Position":
         json_obj = json.loads(json_string)
