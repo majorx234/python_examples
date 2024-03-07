@@ -16,6 +16,7 @@ class Position:
     pos: np.ndarray
     heading: np.ndarray
 
+    @staticmethod
     def from_json(json_string) -> "Position":
         json_obj = json.loads(json_string)
         return Position(np.array(json_obj["pos"]),
